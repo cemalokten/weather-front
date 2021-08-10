@@ -1,0 +1,92 @@
+html {
+  min-height: 100%;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+  font-family: Apercu;
+  font-size: 2rem;
+  color: rgb(0, 0, 0);
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+  margin: 0;
+}
+
+:root {
+  --dim: 5em;
+}
+
+body {
+  height: 100%;
+}
+
+@font-face {
+  font-family: 'Apercu';
+  src: url('fonts/ApercuMonoPro-Regular.woff2') format('woff2');
+  font-weight: normal;
+  font-style: normal;
+}
+
+main {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+}
+
+h1 {
+  font-weight: normal;
+  font-size: inherit;
+  padding: 0.5em 0 0.5em 0;
+}
+
+section {
+  width: 50vw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.data {
+  height: var(--dim);
+  width: 100%;
+  border-top: 1px solid rgb(0, 0, 0);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem 0 2rem 0;
+}
+
+.data--circle {
+  height: var(--dim);
+}
+
+.data--circle--temp[id='1'] {
+  background: radial-gradient(
+    circle,
+    rgb(255, 174, 0) 0%,
+    rgba(255, 255, 255, 0) 80%
+  );
+}
+
+.data--circle--temp[id='2'] {
+  background: radial-gradient(
+    circle,
+    rgb(25, 171, 255) 0%,
+    rgba(255, 255, 255, 0) 30%
+  );
+}
+
+.data--title {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@media (max-width: 600px) {
+  html {
+    font-size: 1rem;
+  }
+}
