@@ -15,7 +15,7 @@ html {
 }
 
 :root {
-  --dim: 5em;
+  --dim: calc(92vh / 6);
 }
 
 body {
@@ -36,9 +36,11 @@ main {
 }
 
 h1 {
+  display: flex;
+  align-items: center;
   font-weight: normal;
   font-size: inherit;
-  padding: 0.5em 0 0.5em 0;
+  height: 8vh;
 }
 
 section {
@@ -62,7 +64,9 @@ section {
   height: var(--dim);
 }
 
-.data--circle--temp[id='1'] {
+/* LEFT */
+
+.data--circle--temp--left {
   background: radial-gradient(
     circle,
     rgb(255, 174, 0) 0%,
@@ -70,11 +74,93 @@ section {
   );
 }
 
-.data--circle--temp[id='2'] {
+.data--circle--precip--left {
   background: radial-gradient(
     circle,
-    rgb(25, 171, 255) 0%,
-    rgba(255, 255, 255, 0) 30%
+    rgb(255, 174, 0) 0%,
+    rgba(255, 255, 255, 0) 80%
+  );
+}
+
+.data--circle--wind--left {
+  background: radial-gradient(
+    circle,
+    rgb(255, 174, 0) 0%,
+    rgba(255, 255, 255, 0) 80%
+  );
+}
+
+.data--circle--winddir--left {
+  background: radial-gradient(
+    circle,
+    rgb(255, 174, 0) 0%,
+    rgba(255, 255, 255, 0) 80%
+  );
+}
+
+.data--circle--cloud--left {
+  background: radial-gradient(
+    circle,
+    rgb(255, 174, 0) 0%,
+    rgba(255, 255, 255, 0) 80%
+  );
+}
+
+.data--circle--uv--left {
+  background: radial-gradient(
+    circle,
+    rgb(255, 174, 0) 0%,
+    rgba(255, 255, 255, 0) 80%
+  );
+}
+
+/* RIGHT */
+
+.data--circle--temp--right {
+  background: radial-gradient(
+    circle,
+    rgb(255, 174, 0) 0%,
+    rgba(255, 255, 255, 0) 80%
+  );
+}
+
+.data--circle--precip--right {
+  background: radial-gradient(
+    circle,
+    rgb(255, 174, 0) 0%,
+    rgba(255, 255, 255, 0) 80%
+  );
+}
+
+.data--circle--wind--right {
+  background: radial-gradient(
+    circle,
+    rgb(255, 174, 0) 0%,
+    rgba(255, 255, 255, 0) 80%
+  );
+}
+
+.data--circle--winddir--right {
+  background: radial-gradient(
+    circle,
+    rgb(255, 174, 0) 0%,
+    rgba(255, 255, 255, 0) 80%
+  );
+}
+
+.data--circle--cloud--right {
+  background: radial-gradient(
+    circle,
+    rgb(255, 174, 0) 0%,
+    rgba(255, 255, 255, 0) 80%
+  );
+}
+
+.data--circle--uv--right {
+  background: radial-gradient(
+    circle,
+    rgb(255, 174, 0) 0%,
+    rgba(255, 255, 255, 0) 80%
   );
 }
 
