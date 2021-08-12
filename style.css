@@ -15,7 +15,7 @@ html {
 }
 
 :root {
-  --dim: calc(92vh / 6);
+  --dim: calc(100vh / 7);
 }
 
 body {
@@ -40,7 +40,7 @@ h1 {
   align-items: center;
   font-weight: normal;
   font-size: inherit;
-  height: 8vh;
+  height: var(--dim);
 }
 
 section {
@@ -57,7 +57,7 @@ section {
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 2rem 0 2rem 0;
+  /* padding: 2rem 0 2rem 0; */
 }
 
 .data--circle {

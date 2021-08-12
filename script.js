@@ -1,12 +1,5 @@
 'use strict';
 
-const cityID = {
-  london: 2643743,
-  berlin: 2950159,
-  rykjavík: 3413829,
-  fairbanks: 4855951,
-};
-
 // LEFT
 const tempLeft = document.querySelector('.data--circle--temp--left');
 const precipLeft = document.querySelector('.data--circle--precip--left');
@@ -98,6 +91,7 @@ const cloud = {
 };
 
 const uv = {
+  0: '#fae6e6',
   1: '#ffe0e0',
   2: '#ffbdbd',
   3: '#ff8585',
@@ -201,5 +195,12 @@ async function fetchWeatherDataRight(city) {
   setVisualUV(Math.round(getDataValue(data.data[0].uv)), uvRight, uv);
 }
 
+const cityID = {
+  london: 2643743,
+  berlin: 2950159,
+  rykjavík: 3413829,
+  fairbanks: 4855951,
+};
+
 fetchWeatherDataLeft('london');
-fetchWeatherDataRight('fairbanks');
+fetchWeatherDataRight('berlin');
