@@ -13,7 +13,7 @@ Using a trial version of `Apercu` font by [Colophon Foundry](https://www.colopho
 ### 📚 What I learnt
 - Actually used an `object` in my code!
 - Setting `CSS` variables based on `JSON` data
-- `textContent` beats `innerHTML`
+- `textContent` beats `innerHTML` on performance
 
 ### 🦺 Testing
 - Works on latest version of Firefox, Chrome and Edge
