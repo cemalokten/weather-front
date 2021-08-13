@@ -17,6 +17,7 @@ Using a trial version of `Apercu` font by [Colophon Foundry](https://www.colopho
 
 ### 🦺 Testing
 - Works on latest version of Firefox, Chrome and Edge
+- Works on Mobile
 
 ### ⏳ Future improvements
 - [ ] City search / selection
