@@ -1,6 +1,6 @@
 'use strict';
 
-// LEFT
+// VARIABLES FOR LEFT SIDE OF PAGE
 const tempLeft = document.querySelector('.data--circle--temp--left');
 const precipLeft = document.querySelector('.data--circle--precip--left');
 const windLeft = document.querySelector('.data--circle--wind--left');
@@ -8,7 +8,7 @@ const windDirLeft = document.querySelector('.data--circle--winddir--left');
 const cloudLeft = document.querySelector('.data--circle--cloud--left');
 const uvLeft = document.querySelector('.data--circle--uv--left');
 
-// RIGHT
+// VARIABLES FOR RIGHT SIDE OF PAGE
 const tempRight = document.querySelector('.data--circle--temp--right');
 const precipRight = document.querySelector('.data--circle--precip--right');
 const windRight = document.querySelector('.data--circle--wind--right');
@@ -16,6 +16,16 @@ const windDirRight = document.querySelector('.data--circle--winddir--right');
 const cloudRight = document.querySelector('.data--circle--cloud--right');
 const uvRight = document.querySelector('.data--circle--uv--right');
 
+/* Object of cityID's 
+This needs expanding or replacing with JSON call to API */
+const cityID = {
+  london: 2643743,
+  berlin: 2950159,
+  rykjavík: 3413829,
+  fairbanks: 4855951,
+};
+
+// COLOUR OBJECTS
 const temp = {
   0: '#BFEFFF	',
   10: '#87CEEB',
@@ -105,21 +115,26 @@ const uv = {
   11: '#8f0000',
 };
 
+// BUILD'S API URL FOR SPECIFIC CITYID
 function buildUrl(city) {
   return `https://api.weatherbit.io/v2.0/current?city_id=${cityID[city]}&key=82ac8b5cacf346c69247141d3b92817a`;
 }
 
+/* 
+ -- Returns value from JSON object
+!REMOVE THIS, TEST IF IT WORKS WITHOUT! 
+*/
 function getDataValue(value) {
   return value;
 }
 
+/* Various functions for setting the visual elements of the page, 
+depending on the scale and unit of measurement. */
 function setVisualTemp(value, element) {
   const percentage = value + 50;
   element.setAttribute(
     'style',
-    `background: radial-gradient(circle,${
-      temp[Math.ceil(percentage / 10) * 10]
-    } 0%,rgba(255, 255, 255, 0) ${percentage}%)`
+    `background: radial-gradient(circle,${temp[Math.ceil(percentage / 10) * 10]} 0%,rgba(255, 255, 255, 0) ${percentage}%)`
   );
 }
 
@@ -127,46 +142,30 @@ function setVisualOther(value, element, obj, multiplier) {
   const percentage = value * multiplier;
   element.setAttribute(
     'style',
-    `background: radial-gradient(circle,${
-      obj[Math.ceil(percentage / 10) * 10]
-    } 0%,rgba(255, 255, 255, 0) ${percentage}%)`
+    `background: radial-gradient(circle,${obj[Math.ceil(percentage / 10) * 10]} 0%,rgba(255, 255, 255, 0) ${percentage}%)`
   );
 }
 
 function setVisualUV(value, element, obj) {
   const percentage = value * 10;
-  element.setAttribute(
-    'style',
-    `background: radial-gradient(circle,${obj[value]} 0%,rgba(255, 255, 255, 0) ${percentage}%)`
-  );
+  element.setAttribute('style', `background: radial-gradient(circle,${obj[value]} 0%,rgba(255, 255, 255, 0) ${percentage}%)`);
 }
 
 function setVisualWindDir(value, element, obj) {
-  element.setAttribute(
-    'style',
-    `background: radial-gradient(circle,${
-      obj[value]
-    } 0%,rgba(255, 255, 255, 0) ${50}%)`
-  );
+  element.setAttribute('style', `background: radial-gradient(circle,${obj[value]} 0%,rgba(255, 255, 255, 0) ${50}%)`);
 }
 
-// setVisualTemp(-10, tempLeft);
-// setVisualOther(0, precipLeft, precip, 3);
-// setVisualOther(1.79, windLeft, wind, 10);
-// setVisualWindDir('SW', windDirLeft, windDir);
-// setVisualOther(68, cloudLeft, cloud, 1);
-// setVisualUV(3, uvLeft, uv);
-
+/* Async functions for left & right of page, setting textContent (!NOT innerHTML!)
+& setting visual based on units and functions above */
 async function fetchWeatherDataLeft(city) {
   const data = await fetch(buildUrl(city)).then((response) => response.json());
-  console.log(data);
 
-  tempLeft.innerHTML = `${getDataValue(data.data[0].temp)}`;
-  precipLeft.innerHTML = `${getDataValue(data.data[0].precip)}`;
-  windLeft.innerHTML = `${Math.round(getDataValue(data.data[0].wind_spd))}`;
-  windDirLeft.innerHTML = `${getDataValue(data.data[0].wind_cdir)}`;
-  cloudLeft.innerHTML = `${getDataValue(data.data[0].clouds)}`;
-  uvLeft.innerHTML = `${Math.round(getDataValue(data.data[0].uv))}`;
+  tempLeft.textContent = `${getDataValue(data.data[0].temp)}`;
+  precipLeft.textContent = `${getDataValue(data.data[0].precip)}`;
+  windLeft.textContent = `${Math.round(getDataValue(data.data[0].wind_spd))}`;
+  windDirLeft.textContent = `${getDataValue(data.data[0].wind_cdir)}`;
+  cloudLeft.textContent = `${getDataValue(data.data[0].clouds)}`;
+  uvLeft.textContent = `${Math.round(getDataValue(data.data[0].uv))}`;
 
   setVisualTemp(data.data[0].temp, tempLeft);
   setVisualOther(data.data[0].precip, precipLeft, precip, 3);
@@ -178,14 +177,13 @@ async function fetchWeatherDataLeft(city) {
 
 async function fetchWeatherDataRight(city) {
   const data = await fetch(buildUrl(city)).then((response) => response.json());
-  console.log(data);
 
-  tempRight.innerHTML = `${getDataValue(data.data[0].temp)}`;
-  precipRight.innerHTML = `${getDataValue(data.data[0].precip)}`;
-  windRight.innerHTML = `${Math.round(getDataValue(data.data[0].wind_spd))}`;
-  windDirRight.innerHTML = `${getDataValue(data.data[0].wind_cdir)}`;
-  cloudRight.innerHTML = `${getDataValue(data.data[0].clouds)}`;
-  uvRight.innerHTML = `${Math.round(getDataValue(data.data[0].uv))}`;
+  tempRight.textContent = `${getDataValue(data.data[0].temp)}`;
+  precipRight.textContent = `${getDataValue(data.data[0].precip)}`;
+  windRight.textContent = `${Math.round(getDataValue(data.data[0].wind_spd))}`;
+  windDirRight.textContent = `${getDataValue(data.data[0].wind_cdir)}`;
+  cloudRight.textContent = `${getDataValue(data.data[0].clouds)}`;
+  uvRight.textContent = `${Math.round(getDataValue(data.data[0].uv))}`;
 
   setVisualTemp(data.data[0].temp, tempRight);
   setVisualOther(data.data[0].precip, precipRight, precip, 3);
@@ -194,13 +192,6 @@ async function fetchWeatherDataRight(city) {
   setVisualOther(data.data[0].clouds, cloudRight, cloud, 1);
   setVisualUV(Math.round(getDataValue(data.data[0].uv)), uvRight, uv);
 }
-
-const cityID = {
-  london: 2643743,
-  berlin: 2950159,
-  rykjavík: 3413829,
-  fairbanks: 4855951,
-};
 
 fetchWeatherDataLeft('london');
 fetchWeatherDataRight('berlin');
