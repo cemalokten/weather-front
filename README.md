@@ -24,6 +24,6 @@ Using a trial version of `Apercu` font by [Colophon Foundry](https://www.colopho
 
 ### 👀 Screenshots
 
-![Where is ISS?](images/weather-front-1.png)
+![Weather Front](images/weather-front-1.png)
 
-![Where is ISS?](images/weather-front-2.png)
+![Weather Front](images/weather-front-2.png)
