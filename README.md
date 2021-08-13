@@ -24,6 +24,10 @@ Using a trial version of `Apercu` font by [Colophon Foundry](https://www.colopho
 
 ### 👀 Screenshots
 
+#### Desktop
+
 ![Weather Front](images/weather-front-1.png)
+
+#### Mobile
 
 ![Weather Front](images/weather-front-2.png)
