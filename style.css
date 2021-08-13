@@ -24,7 +24,7 @@ body {
 
 @font-face {
   font-family: 'Apercu';
-  src: url('fonts/ApercuMonoPro-Regular.woff2') format('woff2');
+  src: url('fonts/ApercuMonoPro-Regular-Trial.woff2') format('woff2');
   font-weight: normal;
   font-style: normal;
 }
@@ -67,101 +67,53 @@ section {
 /* LEFT */
 
 .data--circle--temp--left {
-  background: radial-gradient(
-    circle,
-    rgb(255, 174, 0) 0%,
-    rgba(255, 255, 255, 0) 80%
-  );
+  background: radial-gradient(circle, rgb(255, 174, 0) 0%, rgba(255, 255, 255, 0) 80%);
 }
 
 .data--circle--precip--left {
-  background: radial-gradient(
-    circle,
-    rgb(255, 174, 0) 0%,
-    rgba(255, 255, 255, 0) 80%
-  );
+  background: radial-gradient(circle, rgb(255, 174, 0) 0%, rgba(255, 255, 255, 0) 80%);
 }
 
 .data--circle--wind--left {
-  background: radial-gradient(
-    circle,
-    rgb(255, 174, 0) 0%,
-    rgba(255, 255, 255, 0) 80%
-  );
+  background: radial-gradient(circle, rgb(255, 174, 0) 0%, rgba(255, 255, 255, 0) 80%);
 }
 
 .data--circle--winddir--left {
-  background: radial-gradient(
-    circle,
-    rgb(216, 255, 201) 0%,
-    rgba(255, 255, 255, 0) 50%
-  );
+  background: radial-gradient(circle, rgb(216, 255, 201) 0%, rgba(255, 255, 255, 0) 50%);
 }
 
 .data--circle--cloud--left {
-  background: radial-gradient(
-    circle,
-    rgb(255, 174, 0) 0%,
-    rgba(255, 255, 255, 0) 80%
-  );
+  background: radial-gradient(circle, rgb(255, 174, 0) 0%, rgba(255, 255, 255, 0) 80%);
 }
 
 .data--circle--uv--left {
-  background: radial-gradient(
-    circle,
-    rgb(255, 174, 0) 0%,
-    rgba(255, 255, 255, 0) 80%
-  );
+  background: radial-gradient(circle, rgb(255, 174, 0) 0%, rgba(255, 255, 255, 0) 80%);
 }
 
 /* RIGHT */
 
 .data--circle--temp--right {
-  background: radial-gradient(
-    circle,
-    rgb(255, 174, 0) 0%,
-    rgba(255, 255, 255, 0) 80%
-  );
+  background: radial-gradient(circle, rgb(255, 174, 0) 0%, rgba(255, 255, 255, 0) 80%);
 }
 
 .data--circle--precip--right {
-  background: radial-gradient(
-    circle,
-    rgb(255, 174, 0) 0%,
-    rgba(255, 255, 255, 0) 80%
-  );
+  background: radial-gradient(circle, rgb(255, 174, 0) 0%, rgba(255, 255, 255, 0) 80%);
 }
 
 .data--circle--wind--right {
-  background: radial-gradient(
-    circle,
-    rgb(255, 174, 0) 0%,
-    rgba(255, 255, 255, 0) 80%
-  );
+  background: radial-gradient(circle, rgb(255, 174, 0) 0%, rgba(255, 255, 255, 0) 80%);
 }
 
 .data--circle--winddir--right {
-  background: radial-gradient(
-    circle,
-    rgb(255, 174, 0) 0%,
-    rgba(255, 255, 255, 0) 80%
-  );
+  background: radial-gradient(circle, rgb(255, 174, 0) 0%, rgba(255, 255, 255, 0) 80%);
 }
 
 .data--circle--cloud--right {
-  background: radial-gradient(
-    circle,
-    rgb(255, 174, 0) 0%,
-    rgba(255, 255, 255, 0) 80%
-  );
+  background: radial-gradient(circle, rgb(255, 174, 0) 0%, rgba(255, 255, 255, 0) 80%);
 }
 
 .data--circle--uv--right {
-  background: radial-gradient(
-    circle,
-    rgb(255, 174, 0) 0%,
-    rgba(255, 255, 255, 0) 80%
-  );
+  background: radial-gradient(circle, rgb(255, 174, 0) 0%, rgba(255, 255, 255, 0) 80%);
 }
 
 .data--title {
