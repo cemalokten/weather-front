@@ -1,30 +1,29 @@
 ### WEATHER FRONT 🌧️
 
-A site that lets you know if the International Space Station is flying over land 🗻 or sea 🌊, and how fast it's travelling.
+Weather Front compares the weather forcast between two cities. 
 
-The background and text colour changes depending on its location, blue for sea, green for sea.
+Currently locked to London and Berlin, with plans to add a search or dropdown list.
 
-This is the result of a personal challenge to under more about Fetch.
+Each variable has a corresponding colour and size of circle, for example the warmer it is the bigger the circle and the deeper the colour. 
+
+This was a self set project to develop my understanding of `API`'s and `JSON`
+
+Using a trial version of `Apercu` font by [Colophon Foundry](https://www.colophon-foundry.org/typefaces/apercu/)
 
 ### 📚 What I learnt
-- That `fetch`ed data needs to be maniupulated in the `.then()` methods, because otherwise it's unavailable.. 
-- Chaining two `fetch` calls and using the data from each
-- It's possible to include working `HTML` in template literals
-- How to implement a loading message (sort of)
+- Actually used an `object` in my code!
+- Setting `CSS` variables based on `JSON` data
+- `textContent` beats `innerHTML`
 
 ### 🦺 Testing
 - Works on latest version of Firefox, Chrome and Edge
 
 ### ⏳ Future improvements
-- [ ] Add some speed lines / blur onto the emoji
-- [ ] Enable users to choose `unit` for speed
+- [ ] City search / selection
+- [ ] Hover over word to see unit of measurement
 
 ### 👀 Screenshots
 
-![Where is ISS?](images/where-is-iss-11.png)
+![Where is ISS?](images/weather-front-1.png)
 
-![Where is ISS?](images/where-is-iss-21.png)
-
-![Where is ISS?](images/where-is-iss-31.png)
-
-![Where is ISS?](images/where-is-iss-41.png)
+![Where is ISS?](images/weather-front-2.png)
