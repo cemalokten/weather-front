@@ -41,6 +41,7 @@ h1 {
   font-weight: normal;
   font-size: inherit;
   height: var(--dim);
+  text-transform: capitalize;
 }
 
 section {
